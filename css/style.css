@@ -1,0 +1,81 @@
+body {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-image: url(../images/accueil.png);
+    background-size: cover;
+    margin: 0;
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main {
+    position: relative;
+    display: block;
+    margin:0;
+    width: 60%;
+    height: 80vh;
+}
+.blur{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: gray;
+    opacity: 0.9;
+    filter: blur(2px);
+    box-shadow: 5px 5px black;
+        text-align: center;
+        font-weight: 700;
+}
+
+.contenu {
+  display: flex;
+  justify-content:center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+
+}
+.buttons a{
+  padding: 5% 0;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  width: 30%;
+  background-color: black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.buttons a:hover{
+  background-color:  white;
+  color:  black;
+  transition: 0.2s
+}
+
+.imageAccueil {
+  background-size: cover;
+  background-position: center; 
+  display: flex;
+  position: absolute;
+  bottom: 30%;
+  width: 40%;
+  height: 50%;
+  border: 3px solid black;
+  justify-content: center;
+  background-image:url("../images/accueil2.png");
+
+}
