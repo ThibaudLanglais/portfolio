@@ -1,42 +1,48 @@
 body {
-height: 100vh;
-margin: 0;
-font-family: 'Montserrat';
-background-color: #131514;
-color: #D8D9DB;
-}}
-section{
+  height: 100vh;
+  margin: 0;
+  font-family: 'Montserrat';
+  background-color: #131514;
+  color: #D8D9DB;
+}
+}
+
+section {
   width: 100vw;
   height: 100vh;
-
 }
+
 .accueil span {
   color: #131514;
   background-color: #D8D9DB;
   padding-top: 2px;
   transition: 0.2s;
 }
+
 .port:hover {
   transition: 0.2s;
   text-shadow: 5px 5px black;
 }
+
 .htmlcss:hover {
   transition: 0.2s;
   text-shadow: -1px -1px black;
 }
+
 .accueil {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
-  margin:0;
-    flex-wrap: wrap;
-    animation: 1s ease-out 0s 1 start;
-    background-image: url('../images/fleurs.png'), url('../images/moustache.png'), url('../images/nature.png');
+  margin: 0;
+  flex-wrap: wrap;
+  animation: 1s ease-out 0s 1 start;
+  background-image: url('../images/fleurs.png'), url('../images/moustache.png'), url('../images/nature.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position:  bottom center, bottom left, bottom right;
+  background-position: bottom center, bottom left, bottom right;
 }
+
 .accueil>p:first-child {
   top: 0;
   width: 600px;
@@ -59,29 +65,33 @@ section{
   align-items: center;
   transform: translateY(-20%);
 }
+
+
 .accueil div>p:nth-child(1) {
- font-size: 70px;
+  font-size: 70px;
   font-weight: bolder;
   text-transform: uppercase;
   letter-spacing: 10px;
-    transition: 0.5s;
-    margin: 0;
-    padding: 0;
+  transition: 0.5s;
+  margin: 0;
+  padding: 0;
 }
 
 .accueil div>p:nth-child(2) {
- font-size: 20px;
+  font-size: 20px;
   font-weight: bolder;
   text-transform: uppercase;
   letter-spacing: 3px;
-    transition: 0.5s;
-    margin: 0;
+  transition: 0.5s;
+  margin: 0;
 }
+
 .accueil div>p:nth-child(1):hover {
   transition: 0.2s;
   /* text-shadow: 5px 5px white; */
   animation: animatedText;
 }
+
 .accueil div>p:nth-child(2):hover {
   transition: 0.2s;
   /* text-shadow: -2px -2px white; */
@@ -95,13 +105,48 @@ section{
   margin: 0;
 }
 
-@@keyframes start {
-  from{
-    /* opacity: 0; */
-    transform: scaleX(-100%);
-  }
-  to{
-    /* opacity: 1; */
-  transform: scaleX(100%);
-  }
+.competences {
+  background-color: orange;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.portraitchinois {
+  background-color: yellow;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.realisations {
+  background-color: purple;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.contact {
+  background-color: blue;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.navigation1 {
+  top: 0;
+}
+
+/* Section informations perso .infoperso */
+.infoperso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.infoperso>p {
+  margin-top: 0;
+  padding-top: 15px;
+  color: black;
 }
