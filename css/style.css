@@ -2,18 +2,38 @@ body {
 height: 100vh;
 margin: 0;
 font-family: 'Montserrat';
+background-color: #131514;
+color: #D8D9DB;
+}}
+section{
+  width: 100vw;
+  height: 100vh;
+
+}
+.accueil span {
+  color: #131514;
+  background-color: #D8D9DB;
+  padding-top: 2px;
+  transition: 0.2s;
+}
+.port:hover {
+  transition: 0.2s;
+  text-shadow: 5px 5px black;
+}
+.htmlcss:hover {
+  transition: 0.2s;
+  text-shadow: -1px -1px black;
 }
 .accueil {
   width: 100%;
   height: 100vh;
-  display: block;
+  display: flex;
   align-items: center;
-  background-color: #131514;
   margin:0;
-  color: #D8D9DB;
+    flex-wrap: wrap;
+    animation: 1s ease-out 0s 1 start;
 }
 .accueil>p:first-child {
-  left: 10px;
   top: 0;
   width: 600px;
   text-transform: uppercase;
@@ -55,16 +75,29 @@ font-family: 'Montserrat';
 }
 .accueil div>p:nth-child(1):hover {
   transition: 0.2s;
-  text-shadow: 5px 5px white;
+  /* text-shadow: 5px 5px white; */
+  animation: animatedText;
 }
 .accueil div>p:nth-child(2):hover {
   transition: 0.2s;
-  text-shadow: -2px -2px white;
+  /* text-shadow: -2px -2px white; */
+  animation: animatedText2;
 }
-}
+
 .infoperso {
   background-color: #a1a1a1;
   width: 100%;
   height: 100vh;
   margin: 0;
+}
+
+@@keyframes start {
+  from{
+    /* opacity: 0; */
+    transform: scaleX(-100%);
+  }
+  to{
+    /* opacity: 1; */
+  transform: scaleX(100%);
+  }
 }
