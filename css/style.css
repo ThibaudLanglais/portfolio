@@ -32,6 +32,10 @@ section{
   margin:0;
     flex-wrap: wrap;
     animation: 1s ease-out 0s 1 start;
+    background-image: url('../images/fleurs.png'), url('../images/moustache.png'), url('../images/nature.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:  bottom center, bottom left, bottom right;
 }
 .accueil>p:first-child {
   top: 0;
