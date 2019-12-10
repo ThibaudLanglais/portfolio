@@ -66,6 +66,10 @@ section {
   margin-top: 0;
   text-decoration: none;
   color:#D8D9DB;
+  z-index: 1;
+}
+.accueil>a:hover {
+text-shadow: 2px 2px white;
 }
 .accueil div {
   width: 100%;
