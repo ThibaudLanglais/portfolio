@@ -1,9 +1,20 @@
+.scrollContainer{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+width: 16px;
+height: 16px; }
+
+::-webkit-scrollbar-thumb {
+background-color: #D8D9DB;
+-webkit-box-shadow: inset 1px 1px 0 #131514 ; }
 body {
   height: 100vh;
   margin: 0;
   font-family: 'Montserrat';
   background-color: #131514;
   color: #D8D9DB;
+  scroll-behavior: smooth;
 }
 }
 
@@ -17,6 +28,7 @@ section {
   background-color: #D8D9DB;
   padding-top: 2px;
   transition: 0.2s;
+    text-decoration: none;
 }
 
 .port:hover {
@@ -43,7 +55,7 @@ section {
   background-position: bottom center, bottom left, bottom right;
 }
 
-.accueil>p:first-child {
+.accueil>a {
   top: 0;
   width: 600px;
   text-transform: uppercase;
@@ -52,8 +64,9 @@ section {
   letter-spacing: 6px;
   font-size: 30px;
   margin-top: 0;
+  text-decoration: none;
+  color:#D8D9DB;
 }
-
 .accueil div {
   width: 100%;
   height: 100%;
@@ -75,8 +88,8 @@ section {
   transition: 0.5s;
   margin: 0;
   padding: 0;
+  font-style: normal;
 }
-
 .accueil div>p:nth-child(2) {
   font-size: 20px;
   font-weight: bolder;
@@ -150,4 +163,40 @@ section {
   margin-top: 0;
   padding-top: 15px;
   color: black;
+}
+
+.competences {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 94px;
+  font-weight: bold;
+}
+.portraitchinois {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 94px;
+  font-weight: bold;
+}
+.realisations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 94px;
+  font-weight: bold;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 94px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1680px) {
+  .accueil>a {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 }
