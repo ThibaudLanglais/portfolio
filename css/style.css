@@ -1,207 +1,151 @@
-.scrollContainer{
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-width: 16px;
-height: 16px; }
-
-::-webkit-scrollbar-thumb {
-background-color: #D8D9DB;
--webkit-box-shadow: inset 1px 1px 0 #131514 ; }
-body {
-  height: 100vh;
-  margin: 0;
-  font-family: 'Montserrat';
-  background-color: #131514;
-  color: #D8D9DB;
+html {
   scroll-behavior: smooth;
-}
+  font-family: 'Montserrat';
+  color: #D8D9DB;
 }
 
+body {
+  margin: 0;
+}
+
+main {
+  position: relative;
+  top: 8vh;
+}
+/* mise en page rapide section2 */
 section {
-  width: 100vw;
-  height: 100vh;
-}
-
-.accueil span {
-  color: #131514;
-  background-color: #D8D9DB;
-  padding-top: 2px;
-  transition: 0.2s;
-    text-decoration: none;
-}
-
-.port:hover {
-  transition: 0.2s;
-  text-shadow: 5px 5px black;
-}
-
-.htmlcss:hover {
-  transition: 0.2s;
-  text-shadow: -1px -1px black;
-}
-
-.accueil {
-  width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+/* A effacer quand je ferai les autres sections */
+section>p {
+  font-size: 94px;
+}
+section:target{
+  padding-top: 8vh;
+}
+section p {
   margin: 0;
-  flex-wrap: wrap;
-  animation: 1s ease-out 0s 1 start;
+}
+/* header */
+header {
+  width: 100%;
+  height: 8vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+}
+header nav {
+  width: 100%;
+}
+header ul {
+
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+header li {
+  list-style: none;
+}
+header a {
+  text-decoration: none;
+  color: #D8D9DB;
+}
+header a:hover {
+  text-decoration: none;
+  color: red;
+}
+header li:first-child a {
+  text-transform: uppercase;
+}
+/* Section1 */
+.section1 {
+  width: 100%;
+  background-color: #131514;
   background-image: url('../images/fleurs.png'), url('../images/moustache.png'), url('../images/nature.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center, bottom left, bottom right;
-}
-
-.accueil>a {
-  position: fixed;
-  top: 0;
-  width: 600px;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-left: 10px;
-  letter-spacing: 6px;
-  font-size: 30px;
-  margin-top: 0;
-  text-decoration: none;
-  color:#D8D9DB;
-  z-index: 1;
-}
-.accueil>a:hover {
-text-shadow: 2px 2px white;
-}
-.accueil div {
-  width: 100%;
-  height: 100%;
+  height: 84vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   align-items: center;
-  transform: translateY(-20%);
 }
-
-
-.accueil div>p:nth-child(1) {
-  font-size: 70px;
-  font-weight: bolder;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  transition: 0.5s;
+.centeredText {
+  width: 50%;
+    transform: translateY(-20%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.centeredText span {
+  color: #131514;
+  background-color: #D8D9DB;
+  padding: 1px 2% 1px 0;
+}
+.centeredText h2:first-child>span:hover {
+  text-shadow: 2px 2px red;
+  transition: 0.3s;
+}
+.centeredText h2:nth-child(2)>span:hover {
+  text-shadow: -1px -1px red;
+  transition: 0.3s;
+}
+.section1 h2 {
   margin: 0;
-  padding: 0;
-  font-style: normal;
+  text-transform: uppercase;
 }
-.accueil div>p:nth-child(2) {
+.section1 h2:first-child {
+  font-size: 94px;
+}
+.section1 h2:nth-child(2) {
+  font-size: 40px;
+  width: 300px;
+}
+/* fake footer */
+.fakeFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  background-color: black;
+}
+.fakeFooter h2 {
   font-size: 20px;
-  font-weight: bolder;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: 0.5s;
+  font-weight: normal;
   margin: 0;
 }
-
-.accueil div>p:nth-child(1):hover {
-  transition: 0.2s;
-  /* text-shadow: 5px 5px white; */
-  animation: animatedText;
-}
-
-.accueil div>p:nth-child(2):hover {
-  transition: 0.2s;
-  /* text-shadow: -2px -2px white; */
-  animation: animatedText2;
-}
-
+/*a mon propos  */
 .infoperso {
-  background-color: #a1a1a1;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
+background-color: blue;
 }
-
-.competences {
-  background-color: orange;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-}
-
+/* portrait chinois */
 .portraitchinois {
-  background-color: yellow;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
+background-color: green;
 }
-
-.realisations {
-  background-color: purple;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-}
-
-.contact {
-  background-color: blue;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-}
-
-.navigation1 {
-  top: 0;
-}
-
-/* Section informations perso .infoperso */
-.infoperso {
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.infoperso>p {
-  margin-top: 0;
-  padding-top: 15px;
-  color: black;
-}
-
+/* competences*/
 .competences {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 94px;
-  font-weight: bold;
+  position: relative;
+background-color: purple;
 }
-.portraitchinois {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 94px;
-  font-weight: bold;
-}
+/* realisations */
 .realisations {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 94px;
-  font-weight: bold;
+background-color: yellow;
 }
+/* contact */
 .contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 94px;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 1680px) {
-  .accueil>a {
-    font-size: 20px;
-    letter-spacing: 3px;
-  }
+background-color: orange;
 }
