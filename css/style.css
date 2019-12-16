@@ -25,6 +25,7 @@ section>p {
   font-size: 94px;
 }
 section:target{
+  position: relative;
   padding-top: 8vh;
 }
 section p {
@@ -83,6 +84,7 @@ header li:first-child a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 .centeredText {
   width: 50%;
@@ -130,14 +132,96 @@ header li:first-child a {
 }
 /*a mon propos  */
 .infoperso {
-background-color: blue;
+  height: 92vh;
+background-color: black;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-content: flex-start;
+z-index: 1;
 }
+.infoperso h3, h2 {
+  margin: 0;
+}
+.infoperso div {
+  height: 46vh;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+.infoperso div h2 {
+  font-size: 50px;
+}
+.infoperso div div {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  z-index: 3;
+}
+.divDate h3 {
+  font-size: 30px;
+}
+.divDate>div:last-child {
+  display: flex;
+  flex-flow: row wrap;
+}
+.divDate {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index: 4;
+}
+.divDate:hover {
+  transition: 0.5s;
+  }
+.divDate:hover>div:first-child {
+opacity: 0;
+  visibility: hidden;
+transition: 0.5s;
+}
+.divDate:hover>div:last-child {
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+.divDate>div:first-child{
+        transition: 0.5s;
+}
+.divDate>div:last-child{
+  transition: 0.5s;
+}
+.div2019{
+background-color: black;
+transition: 0.5s;
+}
+.div2019:hover{
+  transition: 0.5s;
+  background-image: url("../images/theWave.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+.div2016{
+  background-color: white;
+}
+.div2018{
+  background-color: green;
+}
+.div2017{
+  background-color: red;
+}
+
 /* portrait chinois */
 .portraitchinois {
 background-color: green;
 }
 /* competences*/
 .competences {
+  z-index: 10;
   position: relative;
 background-color: purple;
 }
