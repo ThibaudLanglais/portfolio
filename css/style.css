@@ -1,3 +1,4 @@
+/* RAJOUTER overflow:hidden pour un autre style de navigation (couplé avec scrollbehavior auto) */
 html {
   scroll-behavior: smooth;
   font-family: 'Montserrat';
@@ -12,6 +13,7 @@ main {
   position: relative;
   top: 8vh;
 }
+
 /* mise en page rapide section2 */
 section {
   height: 100vh;
@@ -20,17 +22,12 @@ section {
   flex-direction: column;
   align-items: center;
 }
-/* A effacer quand je ferai les autres sections */
-section>p {
-  font-size: 94px;
-}
-section:target{
+
+section:target {
   position: relative;
   padding-top: 8vh;
 }
-section p {
-  margin: 0;
-}
+
 /* header */
 header {
   width: 100%;
@@ -44,11 +41,12 @@ header {
   justify-content: center;
   font-weight: bold;
 }
+
 header nav {
   width: 100%;
 }
-header ul {
 
+header ul {
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
@@ -57,20 +55,25 @@ header ul {
   margin: 0;
   padding: 0;
 }
+
 header li {
   list-style: none;
 }
+
 header a {
   text-decoration: none;
   color: #D8D9DB;
 }
+
 header a:hover {
   text-decoration: none;
   color: red;
 }
+
 header li:first-child a {
   text-transform: uppercase;
 }
+
 /* Section1 */
 .section1 {
   width: 100%;
@@ -86,37 +89,47 @@ header li:first-child a {
   align-items: center;
   z-index: 100;
 }
+
 .centeredText {
   width: 50%;
-    transform: translateY(-20%);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  transform: translateY(-20%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
+
 .centeredText span {
   color: #131514;
   background-color: #D8D9DB;
   padding: 1px 2% 1px 0;
 }
+
 .centeredText h2:first-child>span:hover {
   text-shadow: 2px 2px red;
   transition: 0.3s;
 }
+
 .centeredText h2:nth-child(2)>span:hover {
   text-shadow: -1px -1px red;
   transition: 0.3s;
 }
+
 .section1 h2 {
   margin: 0;
   text-transform: uppercase;
 }
+
 .section1 h2:first-child {
   font-size: 94px;
 }
+
 .section1 h2:nth-child(2) {
   font-size: 40px;
   width: 300px;
 }
+
 /* fake footer */
 .fakeFooter {
   display: flex;
@@ -125,24 +138,28 @@ header li:first-child a {
   height: 8vh;
   background-color: black;
 }
+
 .fakeFooter h2 {
   font-size: 20px;
   font-weight: normal;
   margin: 0;
 }
+
 /*a mon propos  */
 .infoperso {
   height: 92vh;
-background-color: black;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-content: flex-start;
-z-index: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  z-index: 1;
 }
+
 .infoperso h3, h2 {
   margin: 0;
 }
+
 .infoperso div {
   height: 46vh;
   width: 50%;
@@ -154,82 +171,292 @@ z-index: 1;
   font-size: 50px;
   font-weight: bold;
 }
+
 .infoperso div h2 {
   font-size: 50px;
 }
+
 .infoperso div div {
   width: 100%;
   height: 100%;
   margin: 0;
   z-index: 3;
 }
+
 .divDate h3 {
   font-size: 30px;
+  width: 60%;
+  text-align: center;
 }
+
 .divDate>div:last-child {
   display: flex;
   flex-flow: row wrap;
 }
-.divDate {
+
+.div2019 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  z-index: 4;
 }
+
+.divDate {
+  z-index: 4;
+  background-color: black;
+  overflow: hidden;
+}
+
 .divDate:hover {
   transition: 0.5s;
-  }
-.divDate:hover>div:first-child {
-opacity: 0;
-  visibility: hidden;
-transition: 0.5s;
 }
-.divDate:hover>div:last-child {
+
+.divDate:hover>div:first-child {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.div2019:hover>div:last-child {
   transform: translateY(-100%);
   transition: 0.5s;
 }
-.divDate>div:first-child{
-        transition: 0.5s;
-}
-.divDate>div:last-child{
+
+.divDate>div:first-child {
   transition: 0.5s;
 }
-.div2019{
-background-color: black;
-transition: 0.5s;
+
+.divDate>div:last-child {
+  transition: 0.5s;
 }
-.div2019:hover{
+
+.div2019 {
+  transition: 0.5s;
+}
+
+.div2019:hover {
   transition: 0.5s;
   background-image: url("../images/theWave.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position: center top;
 }
-.div2016{
+
+.div2016 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.div2016:hover {
+  transition: 0.5s;
+  background-image: url("../images/acorigins.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.div2016>div:last-child {
+  transform: translateY(-200%);
+}
+
+.div2016:hover>div:last-child {
+  transform: translateY(-100%);
+}
+
+.div2017 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.div2017 h3:last-child {
+  color: black;
+}
+
+.div2018 h3:last-child {
+  color: black;
+}
+
+.div2016 h3:last-child {
+  color: black;
+}
+
+.div2017:hover {
+  transition: 0.5s;
+  background-image: url("../images/tokyoghoul.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.div2017:hover>div:last-child {
+  transform: translateX(-100%);
+}
+
+.div2018 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.div2018>div:last-child {
+  transform: translateX(-200%);
+}
+
+.div2018:hover {
+  transition: 0.5s;
+  background-image: url("../images/japon.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.div2018:hover>div:last-child {
+  transform: translateX(-100%);
+}
+
+.div2019:hover~ {
+  background-color: #130F0E;
+}
+
+.div2018:hover~.divDate {
+  background-color: #378882;
+}
+
+.div2017:hover~.divDate {
   background-color: white;
 }
-.div2018{
-  background-color: green;
+
+.div2016:hover~.divDate:nth-child(-n+4) {
+  background-color: grey;
 }
-.div2017{
-  background-color: red;
+
+/* competences */
+.competences {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: flex-start;
+  background-color: black;
+}
+
+.competences>div {
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+}
+
+.competences>img {
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  transition: 0.5s;
+}
+
+.competences>img:hover {
+  transition: 0.5s;
+  transform: rotate(180deg) translate(50%, 50%);
+}
+
+.competences>div>div {
+  z-index: 30;
+  width: 50%;
+  height: 100vh;
+}
+
+.left {
+  z-index: 15;
+  visibility: visible;
+  background-color: #F68E72;
+  transition: 0.5s;
+}
+
+.right {
+  z-index: 15;
+  background-color: #6C567B;
+  transition: 0.5s;
+}
+
+.right>div {
+  visibility: hidden;
+}
+
+.competences>img:hover~div:first-child {
+  background-color: #F68E72;
+}
+
+.competences>img:hover~div:last-child {
+  background-color: #F68E72;
+}
+
+.competences>img:hover+div {
+  background-color: #6C567B;
+}
+
+.competences>img:hover~.left>div {
+  visibility: hidden;
+}
+
+.competences>img:hover~.right>div {
+  visibility: visible;
 }
 
 /* portrait chinois */
 .portraitchinois {
-background-color: green;
+  background-color: green;
 }
+
+.portraitchinois p {
+  display: none;
+}
+
+.portraitchinois:hover p:first-child {
+  animation-name: p1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.portraitchinois:hover p:nth-child(2) {
+  animation-name: p1;
+  animation-delay: 2.5s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.portraitchinois:hover p:nth-child(3) {
+  animation-name: p1;
+  animation-delay: 5s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.portraitchinois:hover p:last-child {
+  animation-name: p1;
+  animation-delay: 7.5s;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes p1 {
+  0% {
+    display: none;
+  }
+
+  25% {
+    display: block;
+  }
+}
+
 /* competences*/
-.competences {
-  z-index: 10;
-  position: relative;
-background-color: purple;
-}
 /* realisations */
 .realisations {
-background-color: yellow;
+  background-color: yellow;
 }
+
 /* contact */
 .contact {
-background-color: orange;
+  background-color: orange;
 }
