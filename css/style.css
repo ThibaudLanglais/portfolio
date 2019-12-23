@@ -1,6 +1,7 @@
 /* RAJOUTER overflow:hidden pour un autre style de navigation (couplé avec scrollbehavior auto) */
 html {
-  scroll-behavior: smooth;
+  overflow: hidden;
+  scroll-behavior: auto;
   font-family: 'Montserrat';
   color: #D8D9DB;
 }
@@ -26,6 +27,7 @@ section {
 section:target {
   position: relative;
   padding-top: 8vh;
+  z-index: 500;
 }
 
 /* header */
@@ -294,6 +296,7 @@ header li:first-child a {
 }
 
 .div2018 {
+  transition: 0.5s;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -315,95 +318,133 @@ header li:first-child a {
   transform: translateX(-100%);
 }
 
-.div2019:hover~ {
-  background-color: #130F0E;
-}
-
-.div2018:hover~.divDate {
-  background-color: #378882;
-}
-
-.div2017:hover~.divDate {
-  background-color: white;
-}
-
-.div2016:hover~.divDate:nth-child(-n+4) {
-  background-color: grey;
-}
 
 /* competences */
 .competences {
+  background-color: black;
   display: flex;
   flex-direction: row;
-  position: relative;
-  justify-content: flex-start;
-  background-color: black;
+  height: 92vh;
 }
-
-.competences>div {
-  width: 50%;
-  height: 100vh;
+.competencesHeader h3 {
+  font-size: 90px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: red;
   margin: 0;
-}
-
-.competences>img {
-  width: 10%;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  opacity: 0;
   transition: 0.5s;
 }
-
-.competences>img:hover {
+.competences svg {
+  width: 8%;
+  height: 15%;
   transition: 0.5s;
-  transform: rotate(180deg) translate(50%, 50%);
+  position: absolute;
+  z-index: 11;
+}
+.pen {
+  bottom: calc(1% + ((15% - 8%) * 3 / 2) + 45% );
+  left: 0;
+    margin: calc((15% - 8%) / 2);
+
+}
+.photo {
+  bottom: 0;
+  margin-bottom: 1%;
+  left: 0;
+    margin: calc((15% - 8%) / 2);
+}
+.css{
+  bottom: calc(1% + ((15% - 8%) / 2) + 15% );
+  left: 0;
+    margin: calc((15% - 8%) / 2);
+}
+.group {
+  bottom: calc(1% + ((15% - 8%)) + 30% );
+  left: 0;
+    margin: calc((15% - 8%) / 2);
 }
 
-.competences>div>div {
-  z-index: 30;
-  width: 50%;
-  height: 100vh;
+.pen:hover ~ div>div>.dessin{
+opacity: 1;
 }
-
-.left {
-  z-index: 15;
-  visibility: visible;
-  background-color: #F68E72;
+.pen:hover ~ .middleSide .competencesContainer {
+      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,75% 0);
+}
+.group:hover ~ div>div>.team{
+opacity: 1;
+}
+.group:hover ~ .middleSide .competencesContainer {
+      -webkit-clip-path: polygon(50% 100%, 0 100%,0 0, 100% 0,60% 0%);
+}
+.css:hover ~ div>div>.webcss{
+opacity: 1;
+}
+.css:hover ~ .middleSide .competencesContainer {
+      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,85% 0);
+}
+.photo:hover ~ div>div>.editing{
+opacity: 1;
+}
+.photo:hover ~ .middleSide .competencesContainer {
+      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,35% 0);
+}
+.leftSide, .rightSide{
+  width: 15%;
+  z-index: 10;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.rightSide{
+  order: 1;
+}
+.competences svg:hover {
+  color: red;
+}
+.middleSide{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background: black;
+}
+.competencesHeader{
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+.competencesContainer{
   transition: 0.5s;
-}
-
-.right {
-  z-index: 15;
-  background-color: #6C567B;
+  width: 100%;
+  height: 80%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    -webkit-clip-path: polygon(50% 100%, 0 100%,0 0,0 0, 0 100%);
+ }
+.circle{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
   transition: 0.5s;
+  border-radius: 50%;
+  color: red;
+  border: 5px solid black;
+width: 60vw;
+height: 60vw;
+background-color: red;
 }
-
-.right>div {
-  visibility: hidden;
-}
-
-.competences>img:hover~div:first-child {
-  background-color: #F68E72;
-}
-
-.competences>img:hover~div:last-child {
-  background-color: #F68E72;
-}
-
-.competences>img:hover+div {
-  background-color: #6C567B;
-}
-
-.competences>img:hover~.left>div {
-  visibility: hidden;
-}
-
-.competences>img:hover~.right>div {
-  visibility: visible;
-}
-
 /* portrait chinois*/
 .portraitReset{
   width: 100%;
@@ -552,6 +593,7 @@ animation-duration: 5s ;
     visibility: hidden;
   }
 }
+
 
 /* realisations */
 .realisations {
