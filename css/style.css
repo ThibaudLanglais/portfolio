@@ -272,10 +272,10 @@ header li:first-child a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  color: black;
+  color: white;
 }
 
-.div2017 h3:last-child {
+.div2017 h3 {
   color: black;
 }
 
@@ -785,4 +785,17 @@ input:hover, textarea:hover{
   color: black;
   border-radius: 50px;
   font-weight: bold;
+}
+
+
+@media screen and (max-width: 1281px) {
+  .portraitchinois h3 {
+    font-size: 60px;
+  }
+  .portraitchinois h2 {
+    font-size: 70px;
+  }
+  .competencesHeader h3 {
+    font-size: 70px;
+  }
 }
