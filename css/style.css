@@ -65,11 +65,13 @@ header li {
 header a {
   text-decoration: none;
   color: #D8D9DB;
+  transition: 0.3s;
 }
 
 header a:hover {
   text-decoration: none;
   color: red;
+  text-shadow: 0 0 1px red;
 }
 
 header li:first-child a {
@@ -206,6 +208,7 @@ header li:first-child a {
   z-index: 4;
   background-color: black;
   overflow: hidden;
+  font-weight: bold;
 }
 
 .divDate:hover {
@@ -269,6 +272,7 @@ header li:first-child a {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  color: black;
 }
 
 .div2017 h3:last-child {
@@ -597,11 +601,188 @@ animation-duration: 5s ;
 
 /* realisations */
 .realisations {
-  background-color: yellow;
+  background-color: black;
   z-index: 50;
+  display: flex;
+  flex-flow: row wrap;
+  overflow: scroll;
+}
+.realisations>div {
+  transition: 0.6s;
+  width: 30%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3% 5%;
+  -webkit-clip-path: circle(10% at 50% 50%);
+}
+.realisations>div:hover {
+  -webkit-clip-path: circle(100% at 50% 50%);
+}
+.realisations a {
+  width: 10%;
+  height: auto;
+  text-decoration: none;
+  color: red;
 }
 
+.portrait{
+background-image: url('../images/portrait.jpg');
+background-size: cover;
+background-position: center center;
+}
+.afficheSte{
+  background-image: url('../images/affiche.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.sequenceImage {
+  background-image: url('../images/sequenceImage.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.pictos {
+  background-image: url('../images/picto.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+.perso {
+  background-image: url('../images/perso.jpg');
+  background-size: cover;
+  background-position: center bottom;
+}
 /* contact */
 .contact {
-  background-color: orange;
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+.leftContact, .rightContact {
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  padding-top: 2%;
+  display: flex;
+  flex-flow: column;
+  text-align:center;
+  color: white;
+}
+.leftContact{
+  background: black;
+}
+.rightContact{
+  background: black;
+}
+.reseaux {
+  margin-top: 5%;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+.leftContact img {
+  width: 100%;
+  height: auto;
+  padding: 2%;
+}
+.leftContact a {
+  width: 20%;
+  align-self: center;
+  transition: 0.3s;
+}
+.leftContact a:hover {
+transform: scale(1.1);
+}
+.leftContact:hover h2, .rightContact:hover h2 {
+  color: red;
+  transition: 0.3s;
+}
+.middleBorder {
+  position: absolute;
+  align-self: center;
+  height: 70%;
+  width: 1px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  animation-name: glow;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+.contact span {
+  visibility: hidden;
+}
+.contact:target span {
+  visibility: visible;
+}
+
+@keyframes glow {
+  0%{
+    box-shadow: 0 0 10px white;
+  }
+  50%{
+      box-shadow: 0 0 1px white;
+  }
+  100%{
+      box-shadow: 0 0 10px white;
+  }
+}
+
+form input, textarea {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-family: 'Montserrat';
+  transition: 0.2s;
+}
+
+.nom_prenom input {
+  height: 100%;
+  width: 45%;
+}
+form {
+  height: 70%;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 55%;
+  align-self: center;
+}
+.nom_prenom{
+  display: flex;
+  justify-content: space-between;
+  height: 8%;
+  margin: 5%;
+  margin-top: 30%;
+}
+.email {
+  height: 8%;
+  margin: 5%;
+}
+.msg {
+  margin: 5%;
+  height: 16%;
+}
+.submit {
+  width: 40%;
+  height: 12%;
+  margin-top: 10%;
+  align-self: center;
+  transition: 0.5s;
+}
+input:hover, textarea:hover{
+  box-shadow: 0 0 5px white;
+  transform: translateY(-5%);
+
+}
+.submit input {
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  font-weight: bold;
 }
