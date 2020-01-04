@@ -1,9 +1,10 @@
-/* RAJOUTER overflow:hidden pour un autre style de navigation (couplé avec scrollbehavior auto) */
 html {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   scroll-behavior: auto;
   font-family: 'Montserrat';
   color: #D8D9DB;
+  background: black;
 }
 
 body {
@@ -78,6 +79,57 @@ header li:first-child a {
   text-transform: uppercase;
 }
 
+/* Moi */
+.moi {
+  transition: 0.7s;
+  width: 100%;
+  height: 94vh;
+  position: absolute;
+  top: 8vh;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: black;
+  z-index: 10;
+  transform: translateY(100%);
+  background-image: url('../images/moi.png'), url('../images/moi2.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left, bottom right;
+}
+
+.moi:target {
+  transition: 0.7s;
+  transform: translateY(50%);
+  transition: 0.5s;
+  z-index: 600;
+}
+
+.moi>a {
+  position: absolute;
+  top: calc(8vh + 3%);
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  width: 5%;
+}
+
+.moi>a>svg {
+  color: white;
+  transition: 0.3s;
+}
+
+.moi>a>svg:hover {
+  color: red;
+}
+
+.txtperso {
+  position: absolute;
+  align-self: center;
+  text-align: justify;
+  width: 40%;
+}
+
 /* Section1 */
 .section1 {
   width: 100%;
@@ -86,12 +138,32 @@ header li:first-child a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom center, bottom left, bottom right;
-  height: 84vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   z-index: 100;
+  height: 84vh;
+}
+
+.section1>a {
+  width: 5%;
+  position: absolute;
+  top: 70vh;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  z-index: 15000;
+  color: white;
+}
+
+.section1>a>svg {
+  color: white;
+  transition: 0.3s;
+}
+
+.section1>a>svg:hover {
+  color: red;
 }
 
 .centeredText {
@@ -322,7 +394,6 @@ header li:first-child a {
   transform: translateX(-100%);
 }
 
-
 /* competences */
 .competences {
   background-color: black;
@@ -330,6 +401,7 @@ header li:first-child a {
   flex-direction: row;
   height: 92vh;
 }
+
 .competencesHeader h3 {
   font-size: 90px;
   letter-spacing: 5px;
@@ -340,11 +412,12 @@ header li:first-child a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   opacity: 0;
   transition: 0.5s;
 }
+
 .competences svg {
   width: 8%;
   height: 15%;
@@ -352,54 +425,65 @@ header li:first-child a {
   position: absolute;
   z-index: 11;
 }
-.pen {
-  bottom: calc(1% + ((15% - 8%) * 3 / 2) + 45% );
-  left: 0;
-    margin: calc((15% - 8%) / 2);
 
+.pen {
+  bottom: calc(1% + ((15% - 8%) * 3 / 2) + 45%);
+  left: 0;
+  margin: calc((15% - 8%) / 2);
 }
+
 .photo {
   bottom: 0;
   margin-bottom: 1%;
   left: 0;
-    margin: calc((15% - 8%) / 2);
-}
-.css{
-  bottom: calc(1% + ((15% - 8%) / 2) + 15% );
-  left: 0;
-    margin: calc((15% - 8%) / 2);
-}
-.group {
-  bottom: calc(1% + ((15% - 8%)) + 30% );
-  left: 0;
-    margin: calc((15% - 8%) / 2);
+  margin: calc((15% - 8%) / 2);
 }
 
-.pen:hover ~ div>div>.dessin{
-opacity: 1;
+.css {
+  bottom: calc(1% + ((15% - 8%) / 2) + 15%);
+  left: 0;
+  margin: calc((15% - 8%) / 2);
 }
-.pen:hover ~ .middleSide .competencesContainer {
-      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,75% 0);
+
+.group {
+  bottom: calc(1% + ((15% - 8%)) + 30%);
+  left: 0;
+  margin: calc((15% - 8%) / 2);
 }
-.group:hover ~ div>div>.team{
-opacity: 1;
+
+.pen:hover~div>div>.dessin {
+  opacity: 1;
 }
-.group:hover ~ .middleSide .competencesContainer {
-      -webkit-clip-path: polygon(50% 100%, 0 100%,0 0, 100% 0,60% 0%);
+
+.pen:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 0 0, 75% 0);
 }
-.css:hover ~ div>div>.webcss{
-opacity: 1;
+
+.group:hover~div>div>.team {
+  opacity: 1;
 }
-.css:hover ~ .middleSide .competencesContainer {
-      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,85% 0);
+
+.group:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 60% 0%);
 }
-.photo:hover ~ div>div>.editing{
-opacity: 1;
+
+.css:hover~div>div>.webcss {
+  opacity: 1;
 }
-.photo:hover ~ .middleSide .competencesContainer {
-      -webkit-clip-path: polygon(50% 100%, 0 100%, 0 0 , 0 0 ,35% 0);
+
+.css:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 0 0, 85% 0);
 }
-.leftSide, .rightSide{
+
+.photo:hover~div>div>.editing {
+  opacity: 1;
+}
+
+.photo:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 0 0, 35% 0);
+}
+
+.leftSide, .rightSide {
   width: 15%;
   z-index: 10;
   height: 100%;
@@ -408,13 +492,16 @@ opacity: 1;
   flex-direction: column;
   justify-content: space-around;
 }
-.rightSide{
+
+.rightSide {
   order: 1;
 }
+
 .competences svg:hover {
   color: red;
 }
-.middleSide{
+
+.middleSide {
   width: 70%;
   height: 100%;
   display: flex;
@@ -422,12 +509,14 @@ opacity: 1;
   flex-wrap: nowrap;
   background: black;
 }
-.competencesHeader{
+
+.competencesHeader {
   width: 100%;
   height: 20%;
   position: relative;
 }
-.competencesContainer{
+
+.competencesContainer {
   transition: 0.5s;
   width: 100%;
   height: 80%;
@@ -435,9 +524,10 @@ opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-    -webkit-clip-path: polygon(50% 100%, 0 100%,0 0,0 0, 0 100%);
- }
-.circle{
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 0 0, 0 100%);
+}
+
+.circle {
   position: absolute;
   bottom: 0;
   transform: translateY(50%);
@@ -445,12 +535,13 @@ opacity: 1;
   border-radius: 50%;
   color: red;
   border: 5px solid black;
-width: 60vw;
-height: 60vw;
-background-color: red;
+  width: 60vw;
+  height: 60vw;
+  background-color: red;
 }
+
 /* portrait chinois*/
-.portraitReset{
+.portraitReset {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -459,23 +550,28 @@ background-color: red;
   visibility: hidden;
   z-index: 500;
 }
-.portraitcontainer:hover ~ .portraitReset {
+
+.portraitcontainer:hover~.portraitReset {
   animation-name: reset;
   animation-delay: 26.4s;
-  animation-duration:10s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
 @keyframes reset {
-  from{
+  from {
     visibility: hidden;
   }
-  to{
+
+  to {
     visibility: visible;
   }
 }
-.portraitchinois{
+
+.portraitchinois {
   background-color: #D4BFCD;
 }
+
 .portraitcontainer {
   background-image: url('../images/maquette.jpg');
   background-size: cover;
@@ -483,20 +579,24 @@ background-color: red;
   height: 100%;
   margin: 0;
 }
+
 .portraitcontainer>div {
   display: flex;
   height: auto;
   width: 70%;
   position: absolute;
 }
-.portraitcontainer>div:first-child{
+
+.portraitcontainer>div:first-child {
   left: 15%;
   top: 25%;
 }
-.portraitcontainer>div:last-child{
+
+.portraitcontainer>div:last-child {
   left: 25%;
   bottom: 35%;
 }
+
 .portraitcontainer h3 {
   position: absolute;
   margin: 0;
@@ -510,94 +610,108 @@ background-color: red;
   font-weight: bold;
   text-shadow: 0 0 15px black;
 }
-.portraitcontainer h2{
+
+.portraitcontainer h2 {
   color: white;
   font-size: 100px;
   font-weight: lighter;
   text-shadow: 0 0 15px white;
 }
 
-.portraitcontainer:hover>div>h3:nth-of-type(1){
-animation-name: mots;
-animation-duration: 5s ;
-}
-.portraitcontainer:hover .serais:nth-of-type(1){
+.portraitcontainer:hover>div>h3:nth-of-type(1) {
   animation-name: mots;
-  animation-duration: 5s ;
+  animation-duration: 5s;
+}
+
+.portraitcontainer:hover .serais:nth-of-type(1) {
+  animation-name: mots;
+  animation-duration: 5s;
   animation-delay: 0.2s;
 }
+
 .portraitcontainer:hover .etais:nth-of-type(2) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 5.2s;
 }
-.portraitcontainer:hover .serais:nth-of-type(2){
+
+.portraitcontainer:hover .serais:nth-of-type(2) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 5.4s;
 }
+
 .portraitcontainer:hover .etais:nth-of-type(3) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 10.4s;
 }
-.portraitcontainer:hover .serais:nth-of-type(3){
+
+.portraitcontainer:hover .serais:nth-of-type(3) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 10.6s;
 }
+
 .portraitcontainer:hover .etais:nth-of-type(4) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 15.6s;
 }
-.portraitcontainer:hover .serais:nth-of-type(4){
+
+.portraitcontainer:hover .serais:nth-of-type(4) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 15.8s;
 }
+
 .portraitcontainer:hover .etais:nth-of-type(5) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 20.8s;
 }
-.portraitcontainer:hover .serais:nth-of-type(5){
+
+.portraitcontainer:hover .serais:nth-of-type(5) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 21s;
 }
+
 .portraitcontainer:hover .etais:nth-of-type(6) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 26s;
 }
+
 .portraitcontainer:hover .serais:nth-of-type(6) {
   animation-name: mots;
   animation-duration: 5s;
   animation-delay: 26.2s;
 }
+
 @keyframes mots {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(-650%);
     visibility: hidden;
   }
-  40%,75%{
+
+  40%, 75% {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
   }
 
-  80%{ opacity: 0;
-
-  }
-  100%{
+  80% {
     opacity: 0;
-        transform: translateY(850%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(850%);
     visibility: hidden;
   }
 }
-
 
 /* realisations */
 .realisations {
@@ -606,52 +720,81 @@ animation-duration: 5s ;
   display: flex;
   flex-flow: row wrap;
   overflow: scroll;
-}
-.realisations>div {
-  transition: 0.6s;
-  width: 30%;
-  height: 40%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 3% 5%;
-  -webkit-clip-path: circle(10% at 50% 50%);
-}
-.realisations>div:hover {
-  -webkit-clip-path: circle(100% at 50% 50%);
-}
-.realisations a {
-  width: 10%;
-  height: auto;
-  text-decoration: none;
-  color: red;
+  margin-bottom: 3%;
 }
 
-.portrait{
-background-image: url('../images/portrait.jpg');
-background-size: cover;
-background-position: center center;
+.realisations>div {
+  transition: 0.6s;
+  clip-path: circle(10% at 20% 50%);
+  width: 80%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3% 5%;
 }
-.afficheSte{
+
+.realisations>div>div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.realisations>div:hover {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.realisations a {
+  text-decoration: none;
+  color: red;
+  width: 20%;
+}
+
+.realisations h2 {
+  width: 40%;
+  text-align: justify;
+}
+
+.realisations>div:last-child {
+  padding-bottom: 3%;
+}
+
+.portrait>div {
+  width: 40%;
+  background-image: url('../images/portrait.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.afficheSte>div {
+  width: 40%;
   background-image: url('../images/affiche.jpg');
   background-size: cover;
   background-position: center center;
 }
-.sequenceImage {
+
+.sequenceImage>div {
+  width: 40%;
   background-image: url('../images/sequenceImage.jpg');
   background-size: cover;
   background-position: center center;
 }
-.pictos {
+
+.pictos>div {
+  width: 40%;
   background-image: url('../images/picto.jpg');
   background-size: cover;
   background-position: center center;
 }
-.perso {
+
+.perso>div {
+  width: 40%;
   background-image: url('../images/perso.jpg');
   background-size: cover;
   background-position: center bottom;
 }
+
 /* contact */
 .contact {
   z-index: 0;
@@ -661,6 +804,7 @@ background-position: center center;
   margin: 0;
   padding: 0;
 }
+
 .leftContact, .rightContact {
   height: 100%;
   width: 50%;
@@ -668,15 +812,18 @@ background-position: center center;
   padding-top: 2%;
   display: flex;
   flex-flow: column;
-  text-align:center;
+  text-align: center;
   color: white;
 }
-.leftContact{
+
+.leftContact {
   background: black;
 }
-.rightContact{
+
+.rightContact {
   background: black;
 }
+
 .reseaux {
   margin-top: 5%;
   width: 100%;
@@ -685,23 +832,28 @@ background-position: center center;
   flex-flow: column;
   justify-content: space-around;
 }
+
 .leftContact img {
   width: 100%;
   height: auto;
   padding: 2%;
 }
+
 .leftContact a {
   width: 20%;
   align-self: center;
   transition: 0.3s;
 }
+
 .leftContact a:hover {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
+
 .leftContact:hover h2, .rightContact:hover h2 {
   color: red;
   transition: 0.3s;
 }
+
 .middleBorder {
   position: absolute;
   align-self: center;
@@ -714,22 +866,26 @@ transform: scale(1.1);
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
+
 .contact span {
   visibility: hidden;
 }
+
 .contact:target span {
   visibility: visible;
 }
 
 @keyframes glow {
-  0%{
+  0% {
     box-shadow: 0 0 10px white;
   }
-  50%{
-      box-shadow: 0 0 1px white;
+
+  50% {
+    box-shadow: 0 0 1px white;
   }
-  100%{
-      box-shadow: 0 0 10px white;
+
+  100% {
+    box-shadow: 0 0 10px white;
   }
 }
 
@@ -746,6 +902,7 @@ form input, textarea {
   height: 100%;
   width: 45%;
 }
+
 form {
   height: 70%;
   display: flex;
@@ -753,21 +910,25 @@ form {
   width: 55%;
   align-self: center;
 }
-.nom_prenom{
+
+.nom_prenom {
   display: flex;
   justify-content: space-between;
   height: 8%;
   margin: 5%;
   margin-top: 30%;
 }
+
 .email {
   height: 8%;
   margin: 5%;
 }
+
 .msg {
   margin: 5%;
   height: 16%;
 }
+
 .submit {
   width: 40%;
   height: 12%;
@@ -775,11 +936,12 @@ form {
   align-self: center;
   transition: 0.5s;
 }
-input:hover, textarea:hover{
+
+input:hover, textarea:hover {
   box-shadow: 0 0 5px white;
   transform: translateY(-5%);
-
 }
+
 .submit input {
   background-color: white;
   color: black;
@@ -787,14 +949,15 @@ input:hover, textarea:hover{
   font-weight: bold;
 }
 
-
 @media screen and (max-width: 1281px) {
   .portraitchinois h3 {
     font-size: 60px;
   }
+
   .portraitchinois h2 {
     font-size: 70px;
   }
+
   .competencesHeader h3 {
     font-size: 70px;
   }
