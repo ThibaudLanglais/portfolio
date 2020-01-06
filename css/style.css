@@ -732,7 +732,7 @@ header li:first-child a {
   justify-content: space-between;
   align-items: center;
   margin: 3% 5%;
-}
+  overflow-y : auto;
 
 .realisations>div>div {
   height: 100%;
@@ -754,7 +754,6 @@ header li:first-child a {
 .realisations h2 {
   width: 40%;
   text-align: justify;
-  overflow-y: scroll;
 }
 
 .portrait>div {
