@@ -756,10 +756,6 @@ header li:first-child a {
   text-align: justify;
 }
 
-.realisations>div:last-child {
-  padding-bottom: 3%;
-}
-
 .portrait>div {
   width: 40%;
   background-image: url('../images/portrait.jpg');
