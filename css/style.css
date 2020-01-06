@@ -482,7 +482,36 @@ header li:first-child a {
 .photo:hover~.middleSide .competencesContainer {
   clip-path: polygon(50% 100%, 0 100%, 0 0, 0 0, 35% 0);
 }
+.language:hover~div>div>.languageTxt {
+  opacity: 1;
+}
 
+.language:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 80% 0, 50% 100%);
+}
+.communication:hover~div>div>.communicationTxt {
+  opacity: 1;
+}
+
+.communication:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 20% 0, 50% 100%);
+}
+
+.html:hover~div>div>.htmlTxt {
+  opacity: 1;
+}
+
+.html:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 75% 0, 50% 100%);
+}
+
+.java:hover~div>div>.javaTxt {
+  opacity: 1;
+}
+
+.java:hover~.middleSide .competencesContainer {
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 50% 100%);
+}
 .leftSide, .rightSide {
   width: 15%;
   z-index: 10;
