@@ -497,6 +497,32 @@ header li:first-child a {
   order: 1;
 }
 
+.html {
+  bottom: calc(1% + ((15% - 8%) * 3 / 2) + 45%);
+  right: 0;
+  margin: calc((15% - 8%) / 2);
+}
+
+.c6 {
+  bottom: 0;
+  margin-bottom: 1%;
+  right: 0;
+  margin: calc((15% - 8%) / 2);
+}
+
+.c7 {
+  bottom: calc(1% + ((15% - 8%) / 2) + 15%);
+  right: 0;
+  margin: calc((15% - 8%) / 2);
+}
+
+.c8 {
+  bottom: calc(1% + ((15% - 8%)) + 30%);
+  right: 0;
+  margin: calc((15% - 8%) / 2);
+}
+
+
 .competences svg:hover {
   color: red;
 }
@@ -733,6 +759,7 @@ header li:first-child a {
   align-items: center;
   margin: 3% 5%;
   overflow-y : auto;
+}
 
 .realisations>div>div {
   height: 100%;
