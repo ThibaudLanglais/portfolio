@@ -494,7 +494,7 @@ header li:first-child a {
 }
 
 .communication:hover~.middleSide .competencesContainer {
-  clip-path: polygon(50% 100%, 0 100%, 0 0, 20% 0, 50% 100%);
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 50% 100%);
 }
 
 .html:hover~div>div>.htmlTxt {
@@ -503,6 +503,7 @@ header li:first-child a {
 
 .html:hover~.middleSide .competencesContainer {
   clip-path: polygon(50% 100%, 0 100%, 0 0, 75% 0, 50% 100%);
+  
 }
 
 .java:hover~div>div>.javaTxt {
@@ -510,7 +511,7 @@ header li:first-child a {
 }
 
 .java:hover~.middleSide .competencesContainer {
-  clip-path: polygon(50% 100%, 0 100%, 0 0, 100% 0, 50% 100%);
+  clip-path: polygon(50% 100%, 0 100%, 0 0, 20% 0, 50% 100%);
 }
 .leftSide, .rightSide {
   width: 15%;
