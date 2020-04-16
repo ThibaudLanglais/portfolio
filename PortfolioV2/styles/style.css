@@ -23,13 +23,21 @@
   transition: 0.25s;
   transform-origin: right;
 }
+.menuItem{
+  width: 20%;
+}
 header{
   height: 15%;
   display: flex;
   justify-content: flex-end;
   background-color: #FCF8E8;
 }
-
+.menu span{
+  position: relative;
+  height: 3%;
+  width: 20%;
+  background: black;
+}
 .menu{
   position: absolute;
   width: 100vw;
@@ -44,10 +52,7 @@ header{
   transition: transform 0.3s ease-out;
   z-index: 1;
 }
-.menu a{
-  width: 20%;
-}
-.menu a:last-child{
+.menuItem:last-child{
   margin-top: 20px;
 }
 .menuTriggered{
@@ -227,4 +232,14 @@ p{
 
 .loadingTextEnd{
   opacity: 0;
+}
+
+@media all and (max-device-width: 480px){
+  .menuItem{
+    width: 80%;
+  }
+  .menuTrigger img{
+    height: 10%;
+    margin-bottom: 10px;
+  }
 }

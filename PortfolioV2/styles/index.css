@@ -1,0 +1,43 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.thibaudLanglais{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.thibaudLanglais img{
+  width: 40%;
+}
+main h1{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 100px;
+  font-family: 'Bad Script';
+}
+main>img{
+  margin-top: 140px;
+  width: 18%;
+}
+
+@media all and (max-device-width: 480px)
+{
+  .thibaudLanglais{
+    width: 65%;
+    flex-direction: column;
+  }
+  .thibaudLanglais img{
+    width: 100%;
+  }
+  main h1{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 150px;
+  }
+  main>img{
+    width: 60%;
+  }
+}
