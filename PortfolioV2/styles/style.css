@@ -39,7 +39,6 @@ header{
   background: black;
 }
 .menu{
-  content: "mobile";
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -48,7 +47,7 @@ header{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  top: -100%;
+  top: -100vh;
   left: 0;
   transition: transform 0.3s ease-out;
   z-index: 1;
