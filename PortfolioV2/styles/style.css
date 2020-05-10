@@ -234,12 +234,15 @@ p{
   opacity: 0;
 }
 
-@media all and (max-device-width: 480px){
+@media screen and (max-width: 480px){
   .menuItem{
     width: 80%;
   }
   .menuTrigger img{
     height: 10%;
     margin-bottom: 10px;
+  }
+  .menuTrigger img:last-child{
+    margin-top: 20px;
   }
 }

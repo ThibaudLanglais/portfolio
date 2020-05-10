@@ -42,9 +42,18 @@ section{
   main h1{
     margin-top: 80px;
     margin-bottom: 80px;
-    font-size: 150px;
+    font-size: 80px;
   }
   main>img{
     width: 60%;
   }
+  main>section>img:last-child{
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }
