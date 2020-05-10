@@ -39,6 +39,7 @@ header{
   background: black;
 }
 .menu{
+  content: "mobile";
   position: absolute;
   width: 100vw;
   height: 100vh;
