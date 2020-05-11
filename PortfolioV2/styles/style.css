@@ -245,4 +245,8 @@ p{
   .menuTrigger img:last-child{
     margin-top: 20px;
   }
+  header{
+    width:100%;
+    position: fixed;
+  }
 }
