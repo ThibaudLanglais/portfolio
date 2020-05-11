@@ -197,4 +197,7 @@ main{
   body{
     overflow-y: scroll;
   }
+  main{
+   height: auto;
+  }
 }
