@@ -39,7 +39,7 @@ function pageIndexChange(evt) {
   }
   switch(value){
     case 1:texts[0].textContent=texte1;texts[1].textContent=texte2;texts[2].textContent=texte3;contentContainers[0].style.backgroundImage = "url('./images/BOE.png')";contentContainers[1].style.backgroundImage = "url('./images/DataVis.png')";contentContainers[2].style.backgroundImage = "url('./images/article.jpg')";break;
-    case 2:texts[0].textContent=texte4;texts[1].textContent=texte5;texts[2].textContent=texte6;contentContainers[0].style.backgroundImage = "url('./images/pika.jpg')";contentContainers[1].style.backgroundImage = "url('./images/baisHambers.png')";contentContainers[2].style.backgroundImage = "url('./images/pika.jpg')";break;
+    case 2:texts[0].textContent=texte1;texts[1].textContent=texte2;texts[2].textContent=texte3;contentContainers[0].style.backgroundImage = "url('./images/BOE.png')";contentContainers[1].style.backgroundImage = "url('./images/baisHambers.png')";contentContainers[2].style.backgroundImage = "url('./images/article.jpg')";break;
   }
 }
 
