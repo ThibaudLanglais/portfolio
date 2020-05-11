@@ -250,4 +250,7 @@ p{
     position: fixed;
     z-index: 3;
   }
+  header img:last-child{
+    margin-bottom: 20px;
+  }
 }
