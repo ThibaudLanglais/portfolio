@@ -54,6 +54,8 @@ section{
     margin-bottom: 25%;
   }
   .sectionParallax{
-    transform: translateY(-50px);
+    height: 85%;
+    position: absolute;
+    bottom: 0;
   }
 }
