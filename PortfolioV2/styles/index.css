@@ -49,6 +49,7 @@ section{
   }
   main>section>img:last-child{
     width: 80%;
+    margin-top: 20px;
   }
   .sectionParallax{
     height: 85%;
