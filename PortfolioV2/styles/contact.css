@@ -102,3 +102,42 @@ form {
   border-radius: 50px;
   font-weight: bold;
 }
+@media all and (max-device-width: 480px)
+{
+.separateur{
+  display: none;
+}
+section{
+  margin-top: 200px;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.coordonnees, .formulaire{
+  width: 90%;
+}
+main{
+  overflow-y: scroll;
+}
+form{
+  height: auto;
+}
+.nom_prenom{
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  margin-bottom: 0;
+}
+.nom_prenom input{
+  width: 100%;
+}
+.nom_prenom input:last-child{
+  margin: 4% 0 2%;
+}
+.submit{
+  width: 70%;
+  border-radius: 7px;
+  margin-bottom: 30px;
+}
+}
