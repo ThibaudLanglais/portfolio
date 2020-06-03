@@ -223,7 +223,7 @@ p{
   transition: opacity 200ms linear 400ms, visibility 0s linear 600ms, transform 400ms ease-in 400ms;
   transform: translateY(-100%);
   flex-direction: column;
-  z-index: 50;
+  z-index: 500;
 }
 .loading{
   opacity: 1;
