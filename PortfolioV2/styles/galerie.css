@@ -33,7 +33,8 @@
   color: black;
   font-family: 'Reem Kufi';
   font-size: 15px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   line-height: 25px;
 }
 .epingle{
