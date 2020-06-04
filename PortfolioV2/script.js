@@ -1,7 +1,7 @@
 window.addEventListener('load', stopLoader);
 
 function stopLoader(event) {
-  setTimeout(endLoadingScreen,0);
+  setTimeout(endLoadingScreen,1000);
   let body = document.querySelector('body');
 }
 
@@ -9,7 +9,6 @@ function reloadPage(){
     window.location.reload();
 }
 function endLoadingScreen() {
-  document.querySelector('.saijaLoader').classList.toggle('loadingTextEnd');
+  document.querySelector('.loader-container').classList.toggle('foregroundDisappear');
   document.getElementById('loader').classList.toggle('loading');
-  document.getElementById('diamond').classList.toggle('loadingTextEnd');
 }
