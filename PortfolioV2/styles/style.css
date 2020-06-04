@@ -5,10 +5,6 @@
   animation-iteration-count: infinite;
   animation-timing-function:ease-in-out;
 }
-.nom{
-  position: absolute;
-  width: 75%;
-}
 *{
   font-family: 'Raleway';
 }
