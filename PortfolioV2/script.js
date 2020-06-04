@@ -1,7 +1,7 @@
 window.addEventListener('load', stopLoader);
 
 function stopLoader(event) {
-  setTimeout(endLoadingScreen,1000);
+  endLoadingScreen();
   let body = document.querySelector('body');
 }
 
