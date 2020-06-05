@@ -37,15 +37,63 @@ p{
     top: 48%;
     left: 57%;
 }
-@media all and (max-device-width: 480px)
-{
-main div{
-    flex-direction: column;
+
+@media all and (max-device-width: 1680px)
+{   .yeux{
+        width: 7.5%;
+    }
+    .oeil1{
+        top: 48.5%;
+        left: 32%;
+    }
+    .oeil2{
+        top: 48.5%;
+        left: 64%;
+    }
 }
-main>div>p{
-    order: -1;
-    font-size: 1.1rem;
-    width: 90%;
-    margin: 50px auto;
+@media all and (max-device-width: 1280px)
+{
+    .yeux{
+        width: 10%;
+    }
+    .oeil1{
+        top: 48%;
+        left: 41%;
+    }
+    .oeil2{
+        top: 48%;
+        left: 82%;
+    }
+}
+@media all and (max-device-width: 480px)
+
+{
+    .aproposContainer{
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    main div{
+        flex-direction: column;
+        height: 80%;
+        margin-top: 370px;
+    }
+    main>div>p{
+        order: -1;
+        font-size: 1.1rem;
+        width: 90%;
+        margin: 50px auto;
+    }
+    .yeux{
+        width: 7%;
+    }
+    .oeil1{
+        top: 48%;
+        left: 30%;
+    }
+    .oeil2{
+        top: 48%;
+        left: 60%;
+    }
 }
 }

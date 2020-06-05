@@ -182,6 +182,20 @@ main{
 .rotating3{
   animation-name: rotating3;
 }
+
+@media all and (max-device-width: 1680px)
+{
+  .listItem{
+    width: 18% ;
+  }
+}
+@media all and (max-device-width: 1280px)
+{
+  .listItem{
+    width: 20% ;
+  }
+}
+
 @media all and (max-device-width: 480px)
 {
   .menuNormal{

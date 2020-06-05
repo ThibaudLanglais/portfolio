@@ -13,7 +13,6 @@ function initialiser(){
   let items = document.querySelectorAll('.listItem');
   for(let unItem of items){
     unItem.addEventListener('mouseenter', toggleClassRotating);
-    unItem.addEventListener('click', afficherOeuvre);
   }
   let containers = document.querySelectorAll('.contentContainer');
   for(let unContainer of containers){
@@ -23,14 +22,18 @@ function initialiser(){
 }
 
 function initialiserPage(){
-  let texts = document.querySelectorAll('.listItem p');
-  let contentContainers = document.querySelectorAll('.contentContainer');
-  texts[0].textContent=contents[0]['texte'];
-  texts[1].textContent=contents[1]['texte'];
-  texts[2].textContent=contents[2]['texte'];
-  contentContainers[0].style.backgroundImage = contents[0]['url'];
-  contentContainers[1].style.backgroundImage = contents[1]['url'];
-  contentContainers[2].style.backgroundImage = contents[2]['url'];
+  let textsMobile = document.querySelectorAll('.menuMobile .listItem p');
+  let textsNormal = document.querySelectorAll('.menuNormal .listItem p');
+  let contentContainersMobile = document.querySelectorAll('.menuMobile .contentContainer');
+  let contentContainersNormal = document.querySelectorAll('.menuNormal .contentContainer');
+  for(let i=0; i<contentContainersMobile.length;i++){
+    textsMobile[i].textContent=contents[i]["texte"];
+    contentContainersMobile[i].style.backgroundImage = contents[i]['url'];
+  }
+  for(let i=0; i<contentContainersNormal.length;i++){
+    textsNormal[i].textContent=contents[i]["texte"];
+    contentContainersNormal[i].style.backgroundImage = contents[i]['url'];
+  }
 
 }
 function pageIndexChange(evt) {
