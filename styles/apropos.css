@@ -1,0 +1,51 @@
+main>div{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-30%);
+}
+
+p{
+    margin: auto 0;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    color: brown;
+    text-align: justify;
+}
+
+.aproposContainer{
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+.aproposContainer img{
+    position: absolute;
+}
+.fullSize{
+    height: 100%;
+}
+.yeux{
+    width: 7.2%;
+}
+.oeil1{
+    top: 48%;
+    left: 28%;
+}
+.oeil2{
+    top: 48%;
+    left: 57%;
+}
+@media all and (max-device-width: 480px)
+{
+main div{
+    flex-direction: column;
+}
+main>div>p{
+    order: -1;
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 50px auto;
+}
+}
