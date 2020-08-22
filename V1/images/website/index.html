@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+    label{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="nom">Nom de la recette</label>
+    <input type="text" name="nom" id="nom" required>
+    <label for="category">Une Catégorie (pâtisserie, salé etc...)</label>    
+    <input required type="text" name="category" id="category">
+    <label for="difficulty">Difficulté</label>    
+        <input required type="range" name="difficulty" id="difficulty" min="1" max="5">
+    <label for="persons">Pour combien de personnes</label>    
+    <input required type="text" name="persons" id="persons">
+    <label for="photo">Illustration du plat</label>    
+    <input required type="text" name="photo" id="photo">
+        <label for="time">Temps total de préparation</label>
+        <input required type="text" name="time" id="time">
+        <label for="instructions">Instructions</label>
+        <textarea required name="instructions" id="instructions"></textarea>
+        <button type="submit" id="submit">Ajouter</button>
+    </form>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+  
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+  
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyB_avrRitWqzQJNGfiBtdNZCgsrzfCn12M",
+    authDomain: "mgatheque.firebaseapp.com",
+    databaseURL: "https://mgatheque.firebaseio.com",
+    projectId: "mgatheque",
+    storageBucket: "mgatheque.appspot.com",
+    messagingSenderId: "758656505555",
+    appId: "1:758656505555:web:2c73b24c1917bdf50be626",
+    measurementId: "G-6QHE9MM6E5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="main.js"></script>
+</body>
+
+</html>
